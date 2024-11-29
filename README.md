@@ -33,6 +33,37 @@ SERVER: http://10.0.0.6:8545 (URL del servidor donde se encuentra el nodo transa
 docker run -d --name apitsa1 -p 3030:3030 -e ACCOUNTADDRESS='0x25UHf0......' -e ACCOUNTPRIVATEKEY='58HYUF5GHY5D......' -e SERVER='http://10.0.0.6:8545'  bfa/apitsa1
 ```
 
+# Instalacion en Docker Compose
+
+```
+services:
+  apitsa1:
+    container_name: apitsa1
+    image: hhegykozi/bfa.apitsa1:1.0
+    environment:
+      - ACCOUNTADDRESS=[ACCOUNT BFA]
+      - ACCOUNTPRIVATEKEY=[PRIVATEKEY ACCOUNT BFA]
+      - SERVER=[BFA NODE]
+    ports:
+      - 3030:3030
+
+```
+* Ejemplo
+
+```
+services:
+  apitsa1:
+    container_name: apitsa1
+    image: hhegykozi/bfa.apitsa1:1.0
+    environment:
+      - ACCOUNTADDRESS=0x25UHf0......
+      - ACCOUNTPRIVATEKEY=58HYUF5GHY5D......
+      - SERVER=http://10.0.0.6:8545
+    ports:
+      - 3030:3030
+
+```
+
 # Instalacion en servidor
 
 * Descargar la aplicacion

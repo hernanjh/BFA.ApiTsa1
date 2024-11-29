@@ -1,0 +1,10 @@
+services:
+  apitsa1:
+    container_name: apitsa1
+    image: hhegykozi/bfa.apitsa1:1.0
+    environment:
+      - ACCOUNTADDRESS=0x25UHf0......
+      - ACCOUNTPRIVATEKEY=58HYUF5GHY5D......
+      - SERVER=http://10.0.0.6:8545
+    ports:
+      - 3030:3030
